@@ -20,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img { max-width: 100%; display: block; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -58,9 +59,85 @@ section {
   padding: 64px 0;
   border-top: 1px solid var(--border);
 }
-.hero { border-top: none; padding-top: 80px; }
 
-h2 { font-size: 22px; font-weight: 600; margin-bottom: 24px; }
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.section-title .num {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+p { margin-bottom: 14px; }
+p.muted { color: var(--muted); }
+p:last-child { margin-bottom: 0; }
+
+/* hero */
+.hero {
+  padding: 80px 0 64px;
+  border-top: none !important;
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 40px;
+  align-items: center;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.hero .role {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.hero .role strong { color: var(--text); font-weight: 500; }
+.hero .bio {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 0; }
+
+/* buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { filter: brightness(1.08); text-decoration: none; }
+.btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); text-decoration: none; }
+
+/* photo placeholder */
+.photo {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--muted);
+}
 
 /* footer */
 .footer {
@@ -68,4 +145,8 @@ h2 { font-size: 22px; font-weight: 600; margin-bottom: 24px; }
   padding: 24px 0;
   font-size: 13px;
   color: var(--muted);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
 }
