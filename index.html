@@ -21,6 +21,9 @@
         <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
+      <button class="theme-btn" id="theme-btn" aria-label="Alternar tema">
+        <i data-lucide="moon"></i>
+      </button>
     </div>
   </nav>
 
@@ -170,32 +173,36 @@
 
       <div class="contact-grid">
         <a class="contact-card" href="mailto:pedro@rizzotto.dev">
+          <i data-lucide="mail" class="contact-icon"></i>
           <div class="contact-info">
             <div class="contact-label">Email</div>
             <div class="contact-value">pedro@rizzotto.dev</div>
           </div>
-          <span class="arrow">↗</span>
+          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
         </a>
         <a class="contact-card" href="https://github.com/PedroRizzotto/" target="_blank" rel="noreferrer">
+          <i data-lucide="github" class="contact-icon"></i>
           <div class="contact-info">
             <div class="contact-label">GitHub</div>
             <div class="contact-value">PedroRizzotto</div>
           </div>
-          <span class="arrow">↗</span>
+          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
         </a>
         <a class="contact-card" href="https://www.linkedin.com/in/pedro-henrique-rizzotto-230baa295/" target="_blank" rel="noreferrer">
+          <i data-lucide="linkedin" class="contact-icon"></i>
           <div class="contact-info">
             <div class="contact-label">LinkedIn</div>
             <div class="contact-value">pedro-henrique-rizzotto</div>
           </div>
-          <span class="arrow">↗</span>
+          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
         </a>
         <a class="contact-card" href="https://www.instagram.com/pedrohenriqueriz/" target="_blank" rel="noreferrer">
+          <i data-lucide="instagram" class="contact-icon"></i>
           <div class="contact-info">
             <div class="contact-label">Instagram</div>
             <div class="contact-value">@pedrohenriqueriz</div>
           </div>
-          <span class="arrow">↗</span>
+          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
         </a>
       </div>
     </section>
@@ -204,10 +211,44 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <span>© 2026 Pedro Rizzotto</span>
+      <span>© <span id="year"></span> Pedro Rizzotto</span>
       <span>Feito com HTML, CSS &amp; café</span>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+
+    const btn = document.getElementById("theme-btn");
+    const saved = localStorage.getItem("theme") || "light";
+    setTheme(saved);
+
+    btn.addEventListener("click", () => {
+      const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      setTheme(next);
+      localStorage.setItem("theme", next);
+    });
+
+    function setTheme(t) {
+      document.documentElement.dataset.theme = t;
+      btn.innerHTML = t === "dark" ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
+      lucide.createIcons();
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", e => {
+        const id = a.getAttribute("href").slice(1);
+        const el = id ? document.getElementById(id) : document.body;
+        if (el) {
+          e.preventDefault();
+          window.scrollTo({ top: el.offsetTop - 64, behavior: "smooth" });
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
