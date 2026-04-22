@@ -1,252 +1,354 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pedro Rizzotto — FullStack Developer</title>
-  <meta name="description" content="Portfólio pessoal de Pedro Henrique Rizzotto — FullStack Developer." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro Rizzotto - FullStack Developer</title>
+    <meta
+      name="description"
+      content="Portfólio pessoal de Pedro Henrique Rizzotto - FullStack Developer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#top" class="logo">rizzotto<span>.</span>dev</a>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="theme-btn" id="theme-btn" aria-label="Alternar tema">
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
+    </nav>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="#top" class="logo">rizzotto<span>.</span>dev</a>
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      <button class="theme-btn" id="theme-btn" aria-label="Alternar tema">
-        <i data-lucide="moon"></i>
-      </button>
-    </div>
-  </nav>
+    <main class="wrap">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <h1>Pedro Rizzotto</h1>
+          <p class="role">
+            <strong>FullStack Developer</strong> na Lamiecco Plásticos S.A.
+          </p>
+          <p class="bio">
+            Gosto de resolver problemas, criar soluções, e ver o que faço tomar
+            forma. Trabalho principalmente com Flutter, construindo apps que
+            rodam do comercial ao chão de fábrica.
+          </p>
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+            <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+          </div>
+        </div>
+        <img
+          class="photo"
+          src="assets/img/profile.jpg"
+          alt="Foto de Pedro Rizzotto"
+        />
+      </section>
 
-  <main class="wrap">
-
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="hero-text">
-        <h1>Pedro Rizzotto</h1>
-        <p class="role"><strong>FullStack Developer</strong> na Lamiecco Plásticos S.A.</p>
-        <p class="bio">
-          Gosto de resolver problemas, criar soluções, e ver o que faço tomar forma.
-          Trabalho principalmente com Flutter, construindo apps que rodam do comercial
-          ao chão de fábrica.
+      <!-- SOBRE -->
+      <section id="sobre">
+        <h2 class="section-title"><span class="num">01.</span> Sobre mim</h2>
+        <p>
+          Sou desenvolvedor na <strong>Lamiecco Plásticos S.A.</strong>, onde
+          construí e mantenho uma suite de aplicativos em Flutter que conecta
+          três áreas da empresa: vendas, produção e expedição.
         </p>
-        <div class="hero-actions">
-          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
-          <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
-        </div>
-      </div>
-      <img class="photo" src="assets/img/profile.jpg" alt="Foto de Pedro Rizzotto" />
-    </section>
+        <p class="muted">
+          Gosto do ciclo completo: entender o problema do usuário, desenhar a
+          solução, programar e ver aquilo funcionando no dia a dia. Este site
+          foi construído para a matéria de Front End da faculdade.
+        </p>
+      </section>
 
-    <!-- SOBRE -->
-    <section id="sobre">
-      <h2 class="section-title"><span class="num">01.</span> Sobre mim</h2>
-      <p>
-        Sou desenvolvedor na <strong>Lamiecco Plásticos S.A.</strong>, onde construí e
-        mantenho uma suite de aplicativos em Flutter que conecta três áreas da empresa:
-        vendas, produção e expedição.
-      </p>
-      <p class="muted">
-        Gosto do ciclo completo: entender o problema do usuário, desenhar a solução,
-        programar e ver aquilo funcionando no dia a dia. Este site foi construído para
-        a matéria de Front End da faculdade.
-      </p>
-    </section>
+      <!-- PROJETOS -->
+      <section id="projetos">
+        <h2 class="section-title"><span class="num">02.</span> Projetos</h2>
 
-    <!-- PROJETOS -->
-    <section id="projetos">
-      <h2 class="section-title"><span class="num">02.</span> Projetos</h2>
-
-      <div class="projects">
-
-        <!-- projeto em destaque -->
-        <article class="project featured">
-          <span class="featured-badge">★ Projeto em destaque</span>
-          <div class="project-head">
-            <h3>Gestão de Reclamações — Lamiecco</h3>
-            <span class="year">2024 — 2025</span>
-          </div>
-          <p class="desc">
-            Sistema ponta-a-ponta que integra o app Flutter de vendas com uma tela
-            customizada dentro do ERP Sankhya. O vendedor abre a reclamação pelo
-            celular e o time de back office acompanha, responde e resolve direto
-            do ERP — com chat ao vivo, anexos e notificações em tempo real.
-          </p>
-          <div class="tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">HTML5</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Sankhya ERP</span>
-            <span class="tag">Firebase RTDB</span>
-            <span class="tag">FCM</span>
-            <span class="tag">Google Cloud</span>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-head">
-            <h3>Lamiecco Vendas</h3>
-            <span class="year">2024</span>
-          </div>
-          <p class="desc">
-            App para o time comercial simular preços em tempo real, implantar pedidos
-            de qualquer lugar e registrar reclamações sem depender do escritório.
-          </p>
-          <div class="tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">Dart</span>
-            <span class="tag">REST</span>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-head">
-            <h3>Lamiecco Corte</h3>
-            <span class="year">2024</span>
-          </div>
-          <p class="desc">
-            Apontamentos de ordens de produção e montagem de paletes a partir do QR code
-            de cada produto — tira a planilha do chão de fábrica.
-          </p>
-          <div class="tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">QR Scanner</span>
-            <span class="tag">Dart</span>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-head">
-            <h3>Lamiecco Expedição</h3>
-            <span class="year">2025</span>
-          </div>
-          <p class="desc">
-            Conferência de saída dos paletes via QR do app Corte, geração de etiquetas
-            de transporte, separação de produtos e confirmação de carregamento.
-          </p>
-          <div class="tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">Impressão térmica</span>
-            <span class="tag">Dart</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia">
-      <h2 class="section-title"><span class="num">03.</span> Experiência</h2>
-
-      <div class="exp-list">
-        <div class="exp-item">
-          <div class="exp-period">2024 — Atual</div>
-          <div class="exp-body">
-            <h3 class="exp-role">FullStack Developer</h3>
-            <div class="exp-company">Lamiecco Plásticos S.A.</div>
-            <p class="exp-desc">
-              Responsável pela suite de apps Flutter que liga comercial, produção e
-              expedição. Do desenho da API ao app na mão do operador.
+        <div class="projects">
+          <!-- projeto em destaque -->
+          <article class="project featured">
+            <span class="featured-badge">★ Projeto em destaque</span>
+            <div class="project-head">
+              <h3>Gestão de Reclamações - Lamiecco</h3>
+              <span class="year">2026</span>
+            </div>
+            <p class="desc">
+              Sistema ponta-a-ponta que integra o app Flutter de vendas com uma
+              tela customizada dentro do ERP Sankhya. O vendedor abre a
+              reclamação pelo celular e o time de back office acompanha,
+              responde e resolve direto do ERP - com chat ao vivo, anexos e
+              notificações em tempo real.
             </p>
+            <div class="featured-mocks">
+              <div class="carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide">
+                    <img
+                      src="assets/img/projects/ERP aba Acompanhamentos.png"
+                      alt="ERP - aba Acompanhamentos"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="assets/img/projects/ERP aba Informações.png"
+                      alt="ERP - aba Informações"
+                    />
+                  </div>
+                </div>
+                <div class="carousel-dots">
+                  <button
+                    class="carousel-dot active"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button class="carousel-dot" aria-label="Slide 2"></button>
+                </div>
+              </div>
+              <div class="phone-slot">
+                <img
+                  src="assets/img/projects/App Gestão Reclamações.jpg"
+                  alt="App Gestão de Reclamações"
+                />
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Sankhya ERP</span>
+              <span class="tag">Firebase RTDB</span>
+              <span class="tag">FCM</span>
+              <span class="tag">Google Cloud</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Lamiecco Vendas</h3>
+                <span class="year">2024 - 2025</span>
+              </div>
+              <p class="desc">
+                App para o time comercial simular preços em tempo real,
+                implantar pedidos de qualquer lugar e registrar reclamações sem
+                depender do escritório.
+              </p>
+              <div class="tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">REST</span>
+              </div>
+            </div>
+            <div class="phone-slot">
+              <img
+                src="assets/img/projects/App Lamiecco Vendas.jpg"
+                alt="App Lamiecco Vendas"
+              />
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Lamiecco Corte</h3>
+                <span class="year">2025</span>
+              </div>
+              <p class="desc">
+                Apontamentos de ordens de produção e montagem de paletes a
+                partir do QR code de cada produto - tira a planilha do chão de
+                fábrica.
+              </p>
+              <div class="tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">QR Scanner</span>
+                <span class="tag">Dart</span>
+              </div>
+            </div>
+            <div class="phone-slot">
+              <img
+                src="assets/img/projects/App Lamiecco Corte.jpg"
+                alt="App Lamiecco Corte"
+              />
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Lamiecco Expedição</h3>
+                <span class="year">2025</span>
+              </div>
+              <p class="desc">
+                Conferência de saída dos paletes via QR do app Corte, geração de
+                etiquetas de transporte, separação de produtos e confirmação de
+                carregamento.
+              </p>
+              <div class="tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Impressão térmica</span>
+                <span class="tag">Dart</span>
+              </div>
+            </div>
+            <div class="phone-slot">
+              <img
+                src="assets/img/projects/App Lamiecco Expedição.jpg"
+                alt="App Lamiecco Expedição"
+              />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIÊNCIA -->
+      <section id="experiencia">
+        <h2 class="section-title"><span class="num">03.</span> Experiência</h2>
+
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-period">2024 - Atual</div>
+            <div class="exp-body">
+              <h3 class="exp-role">FullStack Developer</h3>
+              <div class="exp-company">Lamiecco Plásticos S.A.</div>
+              <p class="exp-desc">
+                Responsável pela suite de apps Flutter que liga comercial,
+                produção e expedição. Do desenho da API ao app na mão do
+                operador.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato">
+        <h2 class="section-title"><span class="num">04.</span> Contato</h2>
+        <p class="muted" style="margin-bottom: 24px">
+          Quer conversar sobre um projeto ou só trocar ideia? Me manda uma
+          mensagem.
+        </p>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:pedro@rizzotto.dev">
+            <i data-lucide="mail" class="contact-icon"></i>
+            <div class="contact-info">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">pedro@rizzotto.dev</div>
+            </div>
+            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+          </a>
+          <a
+            class="contact-card"
+            href="https://github.com/PedroRizzotto/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i data-lucide="github" class="contact-icon"></i>
+            <div class="contact-info">
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">PedroRizzotto</div>
+            </div>
+            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+          </a>
+          <a
+            class="contact-card"
+            href="https://www.linkedin.com/in/pedro-henrique-rizzotto-230baa295/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i data-lucide="linkedin" class="contact-icon"></i>
+            <div class="contact-info">
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">pedro-henrique-rizzotto</div>
+            </div>
+            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+          </a>
+          <a
+            class="contact-card"
+            href="https://www.instagram.com/pedrohenriqueriz/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i data-lucide="instagram" class="contact-icon"></i>
+            <div class="contact-info">
+              <div class="contact-label">Instagram</div>
+              <div class="contact-value">@pedrohenriqueriz</div>
+            </div>
+            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span>© <span id="year"></span> Pedro Rizzotto</span>
+        <span>Feito com HTML, CSS &amp; café</span>
       </div>
-    </section>
+    </footer>
 
-    <!-- CONTATO -->
-    <section id="contato">
-      <h2 class="section-title"><span class="num">04.</span> Contato</h2>
-      <p class="muted" style="margin-bottom: 24px;">
-        Quer conversar sobre um projeto ou só trocar ideia? Me manda uma mensagem.
-      </p>
-
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:pedro@rizzotto.dev">
-          <i data-lucide="mail" class="contact-icon"></i>
-          <div class="contact-info">
-            <div class="contact-label">Email</div>
-            <div class="contact-value">pedro@rizzotto.dev</div>
-          </div>
-          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
-        </a>
-        <a class="contact-card" href="https://github.com/PedroRizzotto/" target="_blank" rel="noreferrer">
-          <i data-lucide="github" class="contact-icon"></i>
-          <div class="contact-info">
-            <div class="contact-label">GitHub</div>
-            <div class="contact-value">PedroRizzotto</div>
-          </div>
-          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
-        </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/pedro-henrique-rizzotto-230baa295/" target="_blank" rel="noreferrer">
-          <i data-lucide="linkedin" class="contact-icon"></i>
-          <div class="contact-info">
-            <div class="contact-label">LinkedIn</div>
-            <div class="contact-value">pedro-henrique-rizzotto</div>
-          </div>
-          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
-        </a>
-        <a class="contact-card" href="https://www.instagram.com/pedrohenriqueriz/" target="_blank" rel="noreferrer">
-          <i data-lucide="instagram" class="contact-icon"></i>
-          <div class="contact-info">
-            <div class="contact-label">Instagram</div>
-            <div class="contact-value">@pedrohenriqueriz</div>
-          </div>
-          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>© <span id="year"></span> Pedro Rizzotto</span>
-      <span>Feito com HTML, CSS &amp; café</span>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script>
-    lucide.createIcons();
-
-    const btn = document.getElementById("theme-btn");
-    const saved = localStorage.getItem("theme") || "light";
-    setTheme(saved);
-
-    btn.addEventListener("click", () => {
-      const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      setTheme(next);
-      localStorage.setItem("theme", next);
-    });
-
-    function setTheme(t) {
-      document.documentElement.dataset.theme = t;
-      btn.innerHTML = t === "dark" ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
       lucide.createIcons();
-    }
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+      const btn = document.getElementById("theme-btn");
+      const saved = localStorage.getItem("theme") || "light";
+      setTheme(saved);
 
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", e => {
-        const id = a.getAttribute("href").slice(1);
-        const el = id ? document.getElementById(id) : document.body;
-        if (el) {
-          e.preventDefault();
-          window.scrollTo({ top: el.offsetTop - 64, behavior: "smooth" });
-        }
+      btn.addEventListener("click", () => {
+        const next =
+          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        setTheme(next);
+        localStorage.setItem("theme", next);
       });
-    });
-  </script>
 
-</body>
+      function setTheme(t) {
+        document.documentElement.dataset.theme = t;
+        btn.innerHTML =
+          t === "dark"
+            ? '<i data-lucide="sun"></i>'
+            : '<i data-lucide="moon"></i>';
+        lucide.createIcons();
+      }
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const id = a.getAttribute("href").slice(1);
+          const el = id ? document.getElementById(id) : document.body;
+          if (el) {
+            e.preventDefault();
+            window.scrollTo({ top: el.offsetTop - 64, behavior: "smooth" });
+          }
+        });
+      });
+
+      document.querySelectorAll(".carousel").forEach((carousel) => {
+        const track = carousel.querySelector(".carousel-track");
+        const dots = carousel.querySelectorAll(".carousel-dot");
+        let current = 0;
+        const total = dots.length;
+
+        function goTo(n) {
+          current = (n + total) % total;
+          track.style.transform = `translateX(-${current * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle("active", i === current));
+        }
+
+        dots.forEach((dot, i) => dot.addEventListener("click", () => goTo(i)));
+        setInterval(() => goTo(current + 1), 4000);
+      });
+    </script>
+  </body>
 </html>
