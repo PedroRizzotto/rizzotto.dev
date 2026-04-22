@@ -297,6 +297,13 @@
       </div>
     </footer>
 
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">&#8249;</button>
+      <img id="lightbox-img" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Próximo">&#8250;</button>
+    </div>
+
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
       lucide.createIcons();
@@ -339,6 +346,7 @@
         const dots = carousel.querySelectorAll(".carousel-dot");
         let current = 0;
         const total = dots.length;
+        let paused = false;
 
         function goTo(n) {
           current = (n + total) % total;
@@ -347,7 +355,55 @@
         }
 
         dots.forEach((dot, i) => dot.addEventListener("click", () => goTo(i)));
-        setInterval(() => goTo(current + 1), 4000);
+        carousel.addEventListener("mouseenter", () => { paused = true; });
+        carousel.addEventListener("mouseleave", () => { paused = false; });
+        setInterval(() => { if (!paused) goTo(current + 1); }, 4000);
+      });
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxImages = [];
+      let lightboxIndex = 0;
+
+      document.querySelectorAll(".carousel-slide img, .phone-slot img").forEach((img) => {
+        const idx = lightboxImages.length;
+        lightboxImages.push(img);
+        img.addEventListener("click", (e) => {
+          e.stopPropagation();
+          lightboxIndex = idx;
+          showLightbox(idx);
+        });
+      });
+
+      function showLightbox(i) {
+        lightboxImg.src = lightboxImages[i].src;
+        lightboxImg.alt = lightboxImages[i].alt;
+        lightbox.classList.add("active");
+      }
+
+      document.getElementById("lightbox-prev").addEventListener("click", (e) => {
+        e.stopPropagation();
+        lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+        showLightbox(lightboxIndex);
+      });
+
+      document.getElementById("lightbox-next").addEventListener("click", (e) => {
+        e.stopPropagation();
+        lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
+        showLightbox(lightboxIndex);
+      });
+
+      document.getElementById("lightbox-close").addEventListener("click", () => {
+        lightbox.classList.remove("active");
+      });
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) lightbox.classList.remove("active");
+      });
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") lightbox.classList.remove("active");
+        if (e.key === "ArrowLeft") { lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length; showLightbox(lightboxIndex); }
+        if (e.key === "ArrowRight") { lightboxIndex = (lightboxIndex + 1) % lightboxImages.length; showLightbox(lightboxIndex); }
       });
     </script>
   </body>
