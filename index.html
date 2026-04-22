@@ -309,7 +309,7 @@
       lucide.createIcons();
 
       const btn = document.getElementById("theme-btn");
-      const saved = localStorage.getItem("theme") || "light";
+      const saved = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
       setTheme(saved);
 
       btn.addEventListener("click", () => {
